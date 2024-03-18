@@ -2494,6 +2494,11 @@ textarea.form-control-lg {
   border-width: 1px 0;
 }
 
+.center-text {
+    font-weight: bold; 
+    font-size: 30px;
+  }
+
 .input-group {
   position: relative;
   display: flex;
