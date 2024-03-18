@@ -27,7 +27,7 @@ import org.springframework.http.HttpEntity;
 
 @RestController
 @RequestMapping("/api/auth")
-public class Login {
+public class login {
 
     @Value("${oauth.naver.client-id}")
     private String clientId;
