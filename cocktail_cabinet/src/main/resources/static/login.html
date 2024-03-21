@@ -38,12 +38,39 @@
 	    <script type="text/javascript">
 	        var naver_id_login = new naver_id_login("Tg_bAl8GQpry559kPIBE", "http://localhost:8080");
 	        var state = naver_id_login.getUniqState();
-	        naver_id_login.setButton("green", 3, 40);
 	        naver_id_login.setDomain("http://localhost:8080/login");
+	        naver_id_login.setButton("green", 3, 40);
 	        naver_id_login.setState(state);
 	        naver_id_login.setPopup();
 	        naver_id_login.init_naver_id_login();
+	    </script><br> 
+    </div>
+    
+    <!-- 카카오 로그인 버튼 노출 영역 -->
+    <div class="text-center">
+    
+    	<div id="kakao_id_login"></div>
+	    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	    <script>
+	        // Kakao SDK 초기화
+	        Kakao.init('196597841b17cb519f30d22640825eb2'); 
+	        console.log(Kakao.isInitialized()); 
+	
+	        // 카카오 로그인 버튼 생성
+	        Kakao.Auth.createLoginButton({
+	            container: '#kakao_id_login',
+	            success: function(authObj) {
+	                console.log(authObj); 
+	                window.location.href = 'http://localhost:8080';
+	                // 여기에 사용자 정보를 요청하고 처리하는 로직을 추가할 수 있습니다.
+	            },
+	            fail: function(err) {
+	                console.error(err); 
+	            },
+	        });
 	    </script>
 	    
+		
     </div>
+    
     </html>
